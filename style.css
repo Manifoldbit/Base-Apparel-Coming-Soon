@@ -42,6 +42,7 @@ body {
 }
 .content__info__text h1 span {
   color: hsl(0, 36%, 70%);
+  font-weight: lighter;
 }
 .content__info__text p {
   text-align: center;
