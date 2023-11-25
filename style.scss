@@ -1,0 +1,188 @@
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+   }
+
+h1,
+p{
+    margin: 0;
+}
+
+body {
+ padding: 0;
+ margin: 0;
+ font-family: 'Josefin Sans', sans-serif;
+}
+
+.content{
+    background-color: hsl(0, 100%, 98%);
+    padding: 2em 0 2.7em 0;
+    height: 100%;
+    margin: 0;
+
+    &__info{
+
+        &__images{
+            .base-apparel-logo{
+                margin:0  0 2em 2em ;
+                }
+
+                .hero-mobile-image{
+                    width: 100%;  
+                  }
+        }
+
+        &__text{
+            h1{
+                margin:2em auto .7em auto;
+                text-align: center;
+                text-transform: uppercase;
+                width: 75%;
+                letter-spacing:.4em;
+                font-size:2.5em;
+
+                span{
+                    color:hsl(0, 36%, 70%);
+                }
+
+            }
+            p{
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+                font-size: 1em;
+                color:hsl(0, 36%, 70%);
+            }
+        }
+
+        &__email{
+            width: 90%;
+            margin: 4em auto 0 auto;
+            position: relative;
+
+            input[type="email"]
+            {
+                width: 100%;
+                border-radius: 2em;
+                min-height: 3em;
+                font-size: 1em;
+                border:1px solid hsl(0, 36%, 70%);
+                padding: 0 0 0 1em;
+                z-index: 0;
+            }
+
+            input:focus{
+                border:1px solid hsl(0, 93%, 68%);
+                outline: 0;
+               }
+
+            button{
+                position: relative;
+                bottom:3.5em;
+                left: 79.7%;
+                border-radius: 2em;
+                min-height: 3.5em;
+                width: 20%;
+                background-color:hsl(0, 74%, 74%);
+                border-color:hsl(0, 74%, 74%);
+                z-index: 1;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+               }
+
+            button:hover{
+                cursor: pointer;
+                opacity: .75;
+                transform: scale(1.1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+               }
+
+            .icon-arrow{
+                position: relative;
+                bottom: 5em;
+                left:89%;
+                z-index: 2;
+            }
+
+            #icon-error{
+                position: relative;
+                bottom: 6.5em;
+                left: 70%;
+                visibility:hidden;
+            }
+            #email-error{
+                position: relative;
+                bottom: 5.5em;
+                left:1%;
+                color: red;
+                
+            }
+            ::placeholder{
+                color:hsl(0, 74%, 74%);
+            }
+        }
+    }
+}
+
+/*Desktop view */
+
+@media (min-width: 800px) {
+    .content{
+        padding: 0;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+
+        &__info{
+            padding: 2em 0 0 0;
+            width: 40%;
+            margin-left: 8em;
+
+            &__images{
+
+                .base-apparel-logo{
+                   margin: 0;
+                }
+                .hero-mobile-image{
+                    max-width:0;
+                }
+            }
+            &__text{
+                margin: 4em 0 0 0;
+
+                h1{
+                    margin: 0;
+                    width: 50%;
+                    font-size: 4em;
+                }
+                p{
+                    margin: 1.5em 0 0 0;
+                    width: 95%;
+                    text-align: left;
+                    line-height: 1.5em;
+                }
+            }
+
+            &__email{
+                margin: 0;
+                width: 95%;
+                margin-top: 2.5em;
+            }
+        }
+
+         &__desktop-image{
+            width: 40%;
+            background-image: url(./images/hero-desktop.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+    }
+}
