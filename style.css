@@ -121,7 +121,7 @@ body {
     justify-content: space-between;
   }
   .content__info {
-    padding: 2em 0 0 0;
+    padding: 3em 0 0 0;
     width: 40%;
     margin-left: 8em;
   }
@@ -132,7 +132,7 @@ body {
     max-width: 0;
   }
   .content__info__text {
-    margin: 4em 0 0 0;
+    margin: 7em 0 0 0;
   }
   .content__info__text h1 {
     margin: 0;
